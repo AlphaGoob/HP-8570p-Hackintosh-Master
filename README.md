@@ -14,7 +14,6 @@ HP EliteBook 8570p Hackintosh Files and Guide
 // Links:
 - GitHub https://github.com/AlphaGoob/HP-8570p-Hackintosh-Master
 - Troubleshooting: https://github.com/AlphaGoob/HP-8570p-Hackintosh-Archive
-- Catalina recovery (if GibMacOS is not working) https://drive.google.com/file/d/1m-9geijbYCML29jd5gOn39br-cK8xmv0
 
 // My specifications:
 - HP EliteBook 8570p
