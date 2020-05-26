@@ -62,7 +62,7 @@ HP EliteBook 8570p Hackintosh Files and Guide
 2. Open your BIOS settings with F10
 3. Restore your BIOS defaults
 4. Check the following settings:
-* Boot settings - Custom Logo [Optional for Apple logo at boot]
+* Boot settings - Custom Logo (Optional for Apple logo at boot)
 * Boot settings - Disable fast boot
 * Boot settings - Boot mode - UEFI hybrid (with CSM)
 * Boot settings - Disable Secure boot (disabled if greyed out)
@@ -80,64 +80,64 @@ HP EliteBook 8570p Hackintosh Files and Guide
 5. GibMacOS will create some folders, open them until you see a .pkg file
 6. Copy the path of the PKG file
 7. Insert your USB Stick at a usb port on your motherboard
-###### In this case it are the USB ports under your power button.
+- In this case it are the USB ports under your power button.
 8. Open GibMacOS (makeinstall.bat) as administrator
 9. Select your USB drive with the corresponding number
 10. If the installer ask for your recovery path paste it here (pkg of step 6)
-###### This can take up to 15 minutes
+- This can take up to 15 minutes
 
-Preparing the USB drive
-Delete all files in the following folders on your USB drive
-/EFI/BOOT/BOOTX64.efi
-/EFI/CLOVER/drivers/BIOS
-/EFI/CLOVER/drivers/UEFI
-/EFI/CLOVER/kexts/Other
-Delete the CLOVERX64.efi and config.plist in your /EFI/CLOVER folder
-Open Clover pre-installation folder
-Copy /EFI/CLOVER/ACPI to the /EFI/CLOVER/ folder on your USB drive
-Copy all files from the following folders in the pre-installation folder to your USB drive
-/EFI/BOOT/
-/EFI/CLOVER/drivers/BIOS
-/EFI/CLOVER/drivers/UEFI
-/EFI/CLOVER/kexts/Other
-And finally copy CLOVERX64.EFI, config.plist and drivers64UEFI to the clover folder on your USB drive.
-Check the Clover folder. You now should have a copy of my Clover folder (a full copy won’t work, that’s why i use all the steps)
+// Preparing the USB drive:
+1. Delete all files in the following folders on your USB drive
+- /EFI/BOOT/BOOTX64.efi
+- /EFI/CLOVER/drivers/BIOS
+- /EFI/CLOVER/drivers/UEFI
+- /EFI/CLOVER/kexts/Other
+2. Delete the CLOVERX64.efi and config.plist in your /EFI/CLOVER folder
+3. Open Clover pre-installation folder
+4. Copy /EFI/CLOVER/ACPI to the /EFI/CLOVER/ folder on your USB drive
+5. Copy all files from the following folders in the pre-installation folder to your USB drive
+- /EFI/BOOT/
+- /EFI/CLOVER/drivers/BIOS
+- /EFI/CLOVER/drivers/UEFI
+- /EFI/CLOVER/kexts/Other
+6. And finally copy CLOVERX64.EFI, config.plist and drivers64UEFI to the clover folder on your USB drive.
+7. Check the Clover folder. You now should have a copy of my Clover folder (a full copy won’t work, that’s why i use all the steps)
 
-Install MacOS Catalina
-Restart your laptop
-Press F9 for your boot menu
-Select Boot from EFI file
-Navigate to /EFI/BOOT/BOOTX64.efi
-Select this option and Clover will load
-In clover, hit Enter on MacOS recovery installation
-In the MacOS Installation open Disk Utility
-Remove all volumes on the Internal SSD
-Select Container Disk1 and select Erase
-Name your disk (i like “Hackintosh HD”)
-Select APFS as structure, and click erase. 
-Close the disk utility and open the MacOS Installer
-Follow the instructions in the installer
-Your laptop will reboot and show Clover again select the installer from your internal SSD instead of the USB Drive.
-Note: This can take up to 30 minutes
-If your laptop reboots for the second time and shows Clover select Boot macOS from internal HDD.
-Note: This can take up to 10 minutes
+// Install MacOS Catalina:
+1. Restart your laptop
+2. Press F9 for your boot menu
+3. Select Boot from EFI file
+4. Navigate to /EFI/BOOT/BOOTX64.efi
+5. Select this option and Clover will load
+6. In clover, hit Enter on MacOS recovery installation
+7. In the MacOS Installation open Disk Utility
+8. Remove all volumes on the Internal SSD
+9. Select Container Disk1 and select Erase
+10. Name your disk (i like “Hackintosh HD”)
+11. Select APFS as structure, and click erase. 
+12. Close the disk utility and open the MacOS Installer
+13. Follow the instructions in the installer
+14. Your laptop will reboot and show Clover again select the installer from your internal SSD instead of the USB Drive.
+- This can take up to 30 minutes
+15. If your laptop reboots for the second time and shows Clover select Boot macOS from internal HDD.
+- This can take up to 10 minutes
 
 # Post-installation
 
-Clover Configurator
-Go to Finder > Settings
-Enable your hard drive to show on your desktop
-Unzip Clover Configurator
-Move Clover Configurator to your Apps folder on your hard drive
+// Clover Configurator:
+1. Go to Finder > Settings
+2. Enable your hard drive to show on your desktop
+3. Unzip Clover Configurator
+4. Move Clover Configurator to your Apps folder on your hard drive
 
-Setup your EFI disk
-Open Clover Configurator
-If you start Clover Configurator for the first time you need to go to Security in your settings panel and enable Clover to start. 
-Click on Mount Efi and select Mount Partition. A Partition will show on your desktop
-Rename the partitition to “HP_TOOLS” [HP Custom boot logo]
-Move the Hewlett-Packard folder to your EFI partition [HP Custom boot logo]
-Replace the EFI folder with the post-installation clover folder. 
-If you don’t want to use my bootloader theme you can delete the bootcamp_alpha folder from /EFI/CLOVER/themes/
+// Setup your EFI disk:
+1. Open Clover Configurator
+- If you start Clover Configurator for the first time you need to go to Security in your settings panel and enable Clover to start. 
+2. Click on Mount Efi and select Mount Partition. A Partition will show on your desktop
+3. Rename the partitition to “HP_TOOLS” (for HP Custom boot logo)
+4. Move the Hewlett-Packard folder to your EFI partition (for HP Custom boot logo)
+5. Replace the EFI folder with the post-installation clover folder. 
+* If you don’t want to use my bootloader theme you can delete the bootcamp_alpha folder from /EFI/CLOVER/themes/
 
 Make SMBios suitable for iCloud
 Open Clover Configurator
