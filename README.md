@@ -139,26 +139,26 @@ HP EliteBook 8570p Hackintosh Files and Guide
 5. Replace the EFI folder with the post-installation clover folder. 
 * If you don’t want to use my bootloader theme you can delete the bootcamp_alpha folder from /EFI/CLOVER/themes/
 
-Make SMBios suitable for iCloud
-Open Clover Configurator
-Select File > Open and open the config.plist you just moved to your EFI/CLOVER/
-Click on SMBIOS
-Select “Generate New” under both System - Serial Number as System - SmUUID
+// Make SMBios suitable for iCloud:
+1. Open Clover Configurator
+2. Select File > Open and open the config.plist you just moved to your EFI/CLOVER/
+3. Click on SMBIOS
+4. Select “Generate New” under both System - Serial Number as System - SmUUID
 
-Enable Audio
-Install VoodooHDA
-Click next until you see the screen “Installationtype” Now select “Edit” on the left. 
-Unfold the first option (VoodooHDA Clover UEFI/ESP and select macOS Catalina. 
-Click Install. You will get voodoohda.kext in your clover folder and a extra menu in your preferences.
-Go to your system preferences
-Select VoodooHDA
-On the left select Microphone (Both)
-Slide the Monitor slider all the way down.  
+// Enable Audio:
+1. Install VoodooHDA
+2. Click next until you see the screen “Installationtype” Now select “Edit” on the left. 
+3. Unfold the first option (VoodooHDA Clover UEFI/ESP and select macOS Catalina. 
+4. Click Install. You will get voodoohda.kext in your clover folder and a extra menu in your preferences.
+5. Go to your system preferences
+6. Select VoodooHDA
+7. On the left select Microphone (Both)
+8. Slide the Monitor slider all the way down.  
 
-Disable hibernate (Your system will freeze at sleep otherwise)
-Open up your terminal and run the following commands
-sudo pmset -a hibernatemode 0
-sudo rm /var/vm/sleepimage
-sudo mkdir /var/vm/sleepimage
+// Disable hibernate (Your system will freeze at sleep otherwise):
+1. Open up your terminal and run the following commands
+2. sudo pmset -a hibernatemode 0
+3. sudo rm /var/vm/sleepimage
+4. sudo mkdir /var/vm/sleepimage
 
 All Done! 
